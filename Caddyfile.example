@@ -1,0 +1,4 @@
+myshinnydomain.com
+tls admin@myshinnydomain.com
+gzip
+proxy / ghost:2368

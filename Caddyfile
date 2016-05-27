@@ -1,4 +1,0 @@
-lex.sh
-tls admin@lex.sh
-gzip
-proxy / ghost:2368
