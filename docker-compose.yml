@@ -14,3 +14,13 @@ services:
       - ./Caddyfile:/etc/Caddyfile
     links:
       - ghost
+  dropbox:
+    image: bennetimo/docker-dropbox
+  backup:
+    image: bennetimo/ghost-backup
+    volumes_from:
+      - ghost
+      - dropbox
+    environment:
+      BACKUP_LOCATION: "/root/Dropbox/.ghost_backup"
+      BACKUPS_RETAIN_LIMIT: 3
