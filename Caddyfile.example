@@ -1,4 +1,8 @@
 myshinnydomain.com
-tls admin@myshinnydomain.com
-gzip
-proxy / ghost:2368
+	tls admin@myshinnydomain.com
+	gzip
+	proxy / ghost:2368 {
+		proxy_header Host {host}
+        proxy_header X-Real-IP {remote}
+        proxy_header X-Forwarded-Proto {scheme}
+	}
