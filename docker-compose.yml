@@ -5,8 +5,6 @@ services:
     image: ghost
     volumes:
       - ./_content:/var/lib/ghost
-    depends_on:
-      - caddy
   caddy:
     image: abiosoft/caddy
     ports:
