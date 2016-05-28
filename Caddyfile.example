@@ -3,6 +3,6 @@ myshinnydomain.com
 	gzip
 	proxy / ghost:2368 {
 		proxy_header Host {host}
-        proxy_header X-Real-IP {remote}
-        proxy_header X-Forwarded-Proto {scheme}
+		proxy_header X-Real-IP {remote}
+		proxy_header X-Forwarded-Proto {scheme}
 	}
