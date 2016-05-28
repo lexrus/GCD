@@ -11,8 +11,8 @@ docker-compose config files for https://lex.sh
 ## Features
 
 0. Host [Ghost with Docker](https://hub.docker.com/r/library/ghost/)
-1. SSL server with [Caddy](https://hub.docker.com/r/abiosoft/caddy/)
-2. Backup contents with [ghost-backup](https://hub.docker.com/r/bennetimo/ghost-backup/)
+1. Free HTTPS server with [Caddy](https://hub.docker.com/r/abiosoft/caddy/)
+2. Backup contents and files with [ghost-backup](https://hub.docker.com/r/bennetimo/ghost-backup/)
 3. Store the backup files in Dropbox with [docker-dropbox](https://github.com/bennetimo/docker-dropbox)
 
 ## Usage
