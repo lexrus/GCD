@@ -1,5 +1,7 @@
 # Ghost + Caddy + Dropbox
 
+docker-compose config files for https://lex.sh
+
 ## Requirements
 
 1. A Debian or Ubuntu Linux box which can run Docker
@@ -35,6 +37,14 @@ docker-compose logs dropbox
 # Test backup feature
 docker-compose exec backup backup
 ```
+
+## How to install themes?
+
+Create a `themes` folder in `_content` and download themes from http://marketplace.ghost.org
+
+## How to inject Disqus comment code without hacking post.hbs?
+
+See [this gist](https://gist.github.com/lexrus/ff6d91d29247956a81970a44427b0c64)
 
 
 ```
