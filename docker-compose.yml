@@ -22,5 +22,5 @@ services:
       - ghost
       - dropbox
     environment:
-      BACKUP_LOCATION: "/root/Dropbox/.ghost_backup"
+      BACKUP_LOCATION: "/root/Dropbox/"
       BACKUPS_RETAIN_LIMIT: 3

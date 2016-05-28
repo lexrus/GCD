@@ -1,11 +1,17 @@
 # Ghost + Caddy + Dropbox
 
+## Requirements
+
+1. A Debian or Ubuntu Linux box which can run Docker
+2. A domain name binded to that box
+3. A Dropbox account for backup
+
 ## Features
 
 0. Host [Ghost with Docker](https://hub.docker.com/r/library/ghost/)
 1. SSL server with [Caddy](https://hub.docker.com/r/abiosoft/caddy/)
 2. Backup contents with [ghost-backup](https://hub.docker.com/r/bennetimo/ghost-backup/)
-3. Store the backup files in Dropbox(in `.ghost_backup` folder) with [docker-dropbox](https://github.com/bennetimo/docker-dropbox)
+3. Store the backup files in Dropbox with [docker-dropbox](https://github.com/bennetimo/docker-dropbox)
 
 ## Usage
 
