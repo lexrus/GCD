@@ -5,6 +5,7 @@ services:
     image: ghost
     volumes:
       - ./_content:/var/lib/ghost
+    restart: "on-failure:3"
   caddy:
     image: abiosoft/caddy
     ports:
@@ -14,8 +15,10 @@ services:
       - ./Caddyfile:/etc/Caddyfile
     links:
       - ghost
+    restart: "on-failure:3"
   dropbox:
     image: bennetimo/docker-dropbox
+    restart: "on-failure:3"
   backup:
     image: bennetimo/ghost-backup
     volumes_from:
@@ -23,4 +26,5 @@ services:
       - dropbox
     environment:
       BACKUP_LOCATION: "/root/Dropbox/"
-      BACKUPS_RETAIN_LIMIT: 3
+      BACKUPS_RETAIN_LIMIT: 1
+    retart: "on-failure:3"
