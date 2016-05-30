@@ -27,4 +27,4 @@ services:
     environment:
       BACKUP_LOCATION: "/root/Dropbox/"
       BACKUPS_RETAIN_LIMIT: 1
-    retart: "on-failure:3"
+    restart: "on-failure:3"
