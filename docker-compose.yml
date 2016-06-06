@@ -17,14 +17,17 @@ services:
       - ghost
     restart: "on-failure:3"
   dropbox:
-    image: bennetimo/docker-dropbox
+    image: janeczku/dropbox
     restart: "on-failure:3"
+    volumes:
+      - ./_backup:/dbox/Dropbox
   backup:
     image: bennetimo/ghost-backup
     volumes_from:
       - ghost
-      - dropbox
+    volumes:
+      - ./_backup:/dbox/Dropbox
     environment:
-      BACKUP_LOCATION: "/root/Dropbox/"
+      BACKUP_LOCATION: "/dbox/Dropbox/"
       BACKUPS_RETAIN_LIMIT: 1
     restart: "on-failure:3"
